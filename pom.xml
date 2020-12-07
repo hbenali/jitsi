@@ -31,7 +31,7 @@
 
   <groupId>org.exoplatform.addons.jitsi</groupId>
   <artifactId>exo-jitsi</artifactId>
-  <version>1.0.x-SNAPSHOT</version>
+  <version>1.0.x-agenda-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>eXo Jitsi</name>
   <description>eXo Jitsi portal extension (connector for Web Conferencing)</description>
