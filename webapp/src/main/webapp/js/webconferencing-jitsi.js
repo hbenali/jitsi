@@ -59,6 +59,34 @@
           return settings.title;
         }
       };
+
+      this.addCall = function(title, identityIds, startDate, endDate) {
+        const callId = parseInt(Math.random() * 1000000);
+        return Promise.resolve({
+          callId: callId,
+          url: `#placeholder_${callId}`,
+        });
+      };
+
+      this.updateCall = function(callId, title, identityIds, startDate, endDate) {
+        return Promise.resolve({
+          callId: callId,
+          url: `#placeholder_${callId}`,
+        });
+      };
+
+      this.deleteCall = function(callId) {
+        return Promise.resolve(true);
+      };
+
+      this.getCallId = function(url) {
+        return Promise.resolve(url && url.replace('#placeholder_', ''));
+      };
+
+      this.getCallURL = function(callId) {
+        return Promise.resolve(url && url.replace('#placeholder_', ''));
+      };
+
       /**
        * Request a status of Jitsi Call App
        */

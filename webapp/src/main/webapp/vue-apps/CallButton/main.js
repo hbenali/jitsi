@@ -86,7 +86,7 @@ export function initCallPopup(
     // TODO We need play a single ringtone per page - it will play for at least one incoming call
     const callRinging = localStorage.getItem(ringId);
     if (!callRinging || Date.now() - callRinging > 5000) {
-      log.trace(">>> Call start ringing: " + callId + " for " + currentUserId);
+      log.trace(`>>> Call start ringing: ${  callId  } for ${  currentUserId}`);
       // if not rnging or ring flag too old (for cases of crashed browser page w/o work in process.always below)
       localStorage.setItem(
         ringId,
@@ -94,7 +94,7 @@ export function initCallPopup(
       ); // set it quick as possible to avoid race conditions
     } else {
       playRingtone = false;
-      log.trace(">>> Call already ringing: " + callId + " for " + currentUserId);
+      log.trace(`>>> Call already ringing: ${  callId  } for ${  currentUserId}`);
     }
   }
   
@@ -120,7 +120,7 @@ export function initCallPopup(
       },
       mounted() {
         autoRejectId = setTimeout(() => {
-          log.info("Auto rejected the call: " + callId + " user: " + currentUserId);
+          log.info(`Auto rejected the call: ${  callId  } user: ${  currentUserId}`);
           doReject();
         }, 60000); // Reject automatically calls in 60 seconds if the user hasn't answered
       },
